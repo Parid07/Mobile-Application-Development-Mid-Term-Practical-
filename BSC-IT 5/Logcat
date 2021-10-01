@@ -1,0 +1,70 @@
+XML FILE CODE
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="389dp"
+        android:layout_height="133dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="143dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="455dp"
+        android:background="#2503A9F4"
+        android:lineSpacingExtra="24sp"
+        android:text="@string/welcome_to_android_lifecycle"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#1E88E5"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+</RelativeLayout>
+
+JAVA FILE CODE
+
+package com.example.logcat;
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.util.Log;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Log.d("Activitylifecycle","onCreate Invoke");
+    }
+    public void onStart() {
+        super.onStart();
+        Log.d("ActivityLifeCycle", "onStart Invoke");
+    }
+    public void onResume(){
+        super.onResume();
+        Log.d("ActivityLifeCycle","onResume Invoke");
+    }
+    public void onPause(){
+        super.onPause();
+        Log.d("ActivityLifeCycle","onPause Invoke");
+    }
+    public void onStop(){
+        super.onStop();
+        Log.d("ActivityLifeCycle","onStop Invoke");
+    }
+    public void onDestroy(){
+        super.onDestroy();
+        Log.d("ActivityLifeCycle","onDestroy Invoke");
+    }
+}
